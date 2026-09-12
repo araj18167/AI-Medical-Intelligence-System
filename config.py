@@ -1,10 +1,10 @@
 
-NVIDIA_OCR_KEY = "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"
-NVIDIA_OMNI_KEY = "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"
+NVIDIA_OCR_KEY = "......................................................................."
+NVIDIA_OMNI_KEY = "......................................................................"
 
-NVIDIA_API_KEY = "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"
+NVIDIA_API_KEY = "......................................................................."
 
-GEMINI_API_KEY = "AQ.Ab8RN6J3bfPm0WjcCC0FZ5SieUATEIVsfAO3DIEicjic6-CSsA"
+GEMINI_API_KEY = "......................................................................."
 
 
 SECRET_KEY = "180918"
