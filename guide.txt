@@ -1,0 +1,257 @@
+================================================================================
+  MEDICAL INTELLIGENCE SYSTEM — SETUP & USAGE GUIDE
+================================================================================
+
+Table of contents
+  1. What is this project?
+  2. Folder structure (important files)
+  3. Prerequisites
+  4. Setup — step by step
+  5. How to add the 3 model API keys
+  6. How to start the system
+  7. How to use the system (login + roles)
+  8. Demo / test accounts
+  9. Troubleshooting
+ 10. Security notes
+
+--------------------------------------------------------------------------------
+1. WHAT IS THIS PROJECT?
+--------------------------------------------------------------------------------
+The Medical Intelligence System is an AI-powered, role-based healthcare
+platform that connects Patients, Doctors, Nurses, Hospitals and Pharmacy
+(Shopkeeper) users in one system. It includes:
+
+  - Role dashboards with live KPIs, activity feeds and heatmaps
+  - AI features: Symptom analysis, Disease pattern analysis, prescription
+    OCR (reads medicine names from prescription photos), medical/lab report
+    analysis, MediScan (medical image analysis), MediEcho (voice notes),
+    AI Doctor chat, patient AI-report history
+  - Local Machine Learning: patient risk scoring, health trends,
+    care-task priority scoring, missed-task detection, pharmacy demand
+    forecasting, billing anomaly detection, care-network relationships
+  - Messaging with calls (audio/video WebRTC), voice notes, reactions
+  - Appointments, nurse care tasks, hospital billing, pharmacy billing,
+    inventory, beds/wards, payments
+
+Tech stack: Python + FastAPI + SQLAlchemy + SQLite (backend),
+HTML/CSS/JavaScript + Chart.js (frontend), NVIDIA NIM LLMs, OpenAI Whisper
+(voice), Qdrant + fastembed (RAG), scikit-learn style ML in the "smart/"
+package.
+
+--------------------------------------------------------------------------------
+2. FOLDER STRUCTURE (IMPORTANT FILES)
+--------------------------------------------------------------------------------
+  Medical_Intelligence_system/
+  ├── main.py              <- Backend: all API routes (start here)
+  ├── models.py            <- Database tables (85+ SQLAlchemy models)
+  ├── database.py          <- DB connection + startup migrations
+  ├── auth.py              <- Login/JWT/bcrypt authentication
+  ├── schemas.py           <- Request/response validation
+  ├── config.py            <- *** MODEL API KEYS LIVE HERE ***
+  ├── gemini_client.py     <- NVIDIA NIM calls (LLM, OCR, vision)
+  ├── whisper_client.py    <- Voice transcription (local Whisper)
+  ├── rag_client.py        <- Qdrant vector search (patient-scoped RAG)
+  ├── smart/               <- Local ML package (risk, forecast, symptoms,
+  │                           patterns, nurse, ecosystem, registry, ...)
+  ├── frontend/            <- All web pages (index.html, login.html,
+  │                           dashboard.html, nurse-dashboard.html, ...)
+  ├── medical_system.db    <- SQLite database (auto-created on first run)
+  ├── requirements.txt     <- Python packages
+  ├── start.bat            <- Start backend (adds FFmpeg to PATH)
+  ├── run_server.bat       <- Start backend (simple)
+  └── guide.txt            <- This file
+
+--------------------------------------------------------------------------------
+3. PREREQUISITES
+--------------------------------------------------------------------------------
+  - Windows 10/11 (this guide assumes Windows; steps are similar on
+    Linux/Mac with python instead of py)
+  - Python 3.11 or newer installed and added to PATH
+    (test in a terminal with:  python --version)
+  - Internet connection (required for NVIDIA NIM AI models)
+  - FFmpeg (only needed for MediEcho voice transcription).
+    Install with:  winget install Gyan.FFmpeg
+  - A modern browser (Chrome/Edge recommended)
+
+--------------------------------------------------------------------------------
+4. SETUP — STEP BY STEP
+--------------------------------------------------------------------------------
+  Step 1 — Open a terminal (Command Prompt) in the project folder:
+      cd D:\Projects\Medical_Intelligence_system
+
+  Step 2 — Install Python packages:
+      python -m pip install -r requirements.txt
+
+      If that fails (permissions), try:
+      python -m pip install --user -r requirements.txt
+
+      NOTE: If you have a "venv" folder inside the project, you may still
+      prefer the system Python — the venv may be missing packages such as
+      "openai". Run the server with plain "python" as shown below.
+
+  Step 3 — Add the 3 model API keys (see section 5).
+
+  Step 4 — First run: the database file "medical_system.db" is created and
+      all tables are migrated automatically the first time the backend
+      starts. You do NOT need to create the database yourself.
+
+  Done — you are ready to start the system (section 6).
+
+--------------------------------------------------------------------------------
+5. HOW TO ADD THE 3 MODEL API KEYS
+--------------------------------------------------------------------------------
+The system uses NVIDIA NIM for AI. You need THREE keys, all placed in the
+file:  config.py   (in the project root)
+
+Open config.py with any text editor (Notepad, VS Code). Near the top you
+will see lines like:
+
+      NVIDIA_OCR_KEY = "nvapi-..."     <- key 1 (OCR / reading text from images)
+      NVIDIA_OMNI_KEY = "nvapi-..."    <- key 2 (vision / medical image analysis)
+      NVIDIA_API_KEY = "nvapi-..."     <- key 3 (main LLM / chat & reasoning)
+
+How to get the keys:
+  1. Go to https://build.nvidia.com  (NVIDIA NIM / API catalog).
+  2. Sign in (create a free account if needed) and open any model page
+     (e.g., "Nemotron 3.5 Lightning" for the LLM key, "Nemotron 3 Nano
+     Omni" for OCR/vision).
+  3. Click "Get API Key" -> "Generate Key".
+  4. Copy the key (it starts with "nvapi-...").
+  5. Paste it into config.py between the quotes, replacing the old value:
+         NVIDIA_API_KEY = "nvapi-YOUR_NEW_KEY_HERE"
+  6. Save the file.
+
+  - All three keys must be inside the double quotes, no spaces.
+  - Each key is a different "nvapi-..." string — do not reuse one key for
+    all three lines.
+  - If a key is wrong/expired, that specific AI feature returns an error
+    message; the rest of the system still works.
+  - Alternative (recommended for safety): instead of editing config.py,
+    set them as environment variables. The system also supports
+    QDRANT_API_KEY from an environment variable as an example.
+
+  Which key does what:
+      NVIDIA_API_KEY  -> AI Doctor chat, symptom explanations, report
+                         summaries (Nemotron LLM)
+      NVIDIA_OCR_KEY  -> Prescription intelligence (reads medicine names
+                         from a prescription photo)
+      NVIDIA_OMNI_KEY -> MediScan, medical image & lab report analysis
+
+--------------------------------------------------------------------------------
+6. HOW TO START THE SYSTEM
+--------------------------------------------------------------------------------
+You need TWO terminals.
+
+  Terminal 1 — BACKEND (port 8000):
+      cd D:\Projects\Medical_Intelligence_system
+      python -m uvicorn main:app --host 127.0.0.1 --port 8000
+
+      ...or simply double-click  start.bat  (or run_server.bat).
+
+      You should see "Application startup complete" / Uvicorn running.
+
+  Terminal 2 — FRONTEND (port 3456):
+      cd D:\Projects\Medical_Intelligence_system\frontend
+      python -m http.server 3456
+
+  Then open your browser and go to:
+      http://127.0.0.1:3456
+
+  You will see the landing page (index.html). Click "Get Started" to reach
+  the login page.
+
+  Default URLs:
+      Landing page .... http://127.0.0.1:3456/index.html
+      Login page ...... http://127.0.0.1:3456/login.html
+      API docs ........ http://127.0.0.1:8000/docs   (FastAPI Swagger UI)
+
+--------------------------------------------------------------------------------
+7. HOW TO USE THE SYSTEM (LOGIN + ROLES)
+--------------------------------------------------------------------------------
+  1. Open http://127.0.0.1:3456 -> click "Get Started".
+  2. On the login page, optionally pick a role chip (Auto is fine — the
+     backend always verifies the account's real role).
+  3. Enter the User ID / email and password of one of the demo accounts
+     below (or create a new account with the "Sign Up" tab).
+  4. You land on the correct dashboard for your role.
+
+  What each role can do:
+    PATIENT   - Dashboard with KPIs, Appointments, My Care Network,
+                AI Reports history, Symptom Checker, AI Doctor chat,
+                MediScan/MediEcho, My Billings & payments, linked doctors
+                and hospitals, messaging/calls.
+    DOCTOR    - Dashboard (Today / Active / Avg wait / Compliance),
+                patients, appointments, patient records, prescriptions,
+                AI-assisted analysis, nurse task assignment, chat/calls.
+    NURSE     - Dashboard with Smart Queue (AI-prioritized care tasks +
+                missed-task alerts), My Assignments, patient vitals,
+                care notes, chat.
+    HOSPITAL  - Patients, staff, beds/wards, OPD/IPD, laboratory,
+                radiology, pharmacy & billing, inventory, purchase
+                management, insurance, analytics.
+    PHARMACY  - Dashboard, inventory (low-stock/expiry), customers,
+                billing, sales forecasting, medicine search.
+    ADMIN     - Admin dashboard for system administration.
+
+  Important: all dashboards show LIVE data from the backend. ML features
+  (risk scores, forecasts, patterns) clearly state they are
+  "decision support", not diagnoses.
+
+--------------------------------------------------------------------------------
+8. DEMO / TEST ACCOUNTS
+--------------------------------------------------------------------------------
+  Role      | User ID                | Password
+  ----------+------------------------+---------------
+  Patient   | test.patient.1         | P@ss1234
+  Doctor    | dr1                    | Test@1234
+  Nurse     | nurse1                 | Nurse@1234
+  Admin     | admin1809@gmail.com    | @Aditya5061
+
+  Other roles (Hospital / Pharmacy/Shopkeeper) can be created through the
+  "Sign Up" tab on the login page — signup is fully functional.
+
+--------------------------------------------------------------------------------
+9. TROUBLESHOOTING
+--------------------------------------------------------------------------------
+  Q: Backend starts but login says "Could not reach server"?
+     A: Start the backend with plain "python" (not the venv). The venv
+        folder may be missing packages. Port 8000 must be free.
+
+  Q: "Port 8000 already in use"?
+     A: Another instance is running. Close it, or run:
+        netstat -ano | findstr :8000   -> find the PID
+        taskkill /F /PID <PID>
+
+  Q: AI feature says "service temporarily unavailable"?
+     A: Check your 3 NVIDIA keys in config.py (section 5), and your
+        internet connection. The rest of the system works without AI.
+
+  Q: MediEcho voice transcription fails?
+     A: Install FFmpeg:  winget install Gyan.FFmpeg  (needed for audio).
+        For English-only output keep the default "tiny.en" model.
+
+  Q: ML page says "Insufficient confidence / insufficient data"?
+     A: This is normal and intentional — the ML layer never invents
+        predictions. It needs enough real data (appointments, bills,
+        symptoms) before returning results.
+
+  Q: Frontend page not loading / 404 on dashboards?
+     A: Make sure the frontend server is running in the "frontend"
+        folder (section 6) and open http://127.0.0.1:3456 exactly.
+
+--------------------------------------------------------------------------------
+10. SECURITY NOTES
+--------------------------------------------------------------------------------
+  - config.py stores API keys in plain text. Before publishing this
+    project anywhere (e.g., GitHub), move the keys to environment
+    variables and NEVER commit config.py.
+  - The default JWT secret (SECRET_KEY in config.py) should be changed
+    for any real deployment.
+  - The system is designed for local/demo use (SQLite). For production,
+    switch to PostgreSQL and use HTTPS.
+  - All AI/ML outputs are decision-support only — always advise users to
+    consult a qualified doctor.
+
+================================================================================
+  End of guide — good luck with your project!
+================================================================================
