@@ -1,0 +1,44 @@
+::ffff:127.0.0.1 - - [05/Sep/2026 19:23:39] "GET /login.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:24:29] "GET /login.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:24:29] "GET /styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:24:29] "GET /script.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:24:29] code 404, message File not found
+::ffff:127.0.0.1 - - [05/Sep/2026 19:24:29] "GET /favicon.ico HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:24:31] "GET /dashboard.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:24:31] "GET /styles.css?v=2 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:24:31] "GET /ui-enhance.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:24:31] "GET /sidebar.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:24:31] "GET /script.js?v=2 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:24:31] "GET /swipe.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:24:31] "GET /notifications.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:24:31] "GET /link-drawer.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:24:31] "GET /system-guide.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:24:31] "GET /ui-enhance.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:24:31] "GET /call.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:33:16] "GET /login.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:33:30] "GET /login.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:33:30] "GET /styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:33:30] "GET /script.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:33:30] code 404, message File not found
+::ffff:127.0.0.1 - - [05/Sep/2026 19:33:30] "GET /favicon.ico HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:33:32] "GET /nurse-dashboard.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:33:32] "GET /ui-enhance.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:33:32] "GET /script.js?v=2 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:33:32] "GET /sidebar.js?v=20260903 HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:33:32] "GET /call.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:33:32] "GET /notifications.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:33:32] "GET /system-guide.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:33:32] "GET /ui-enhance.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:33:32] "GET /chat-drawer.js?v=2026-09-interact HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:39:09] "GET /login.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:39:19] "GET /login.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:39:19] "GET /styles.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:39:19] "GET /script.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:39:20] code 404, message File not found
+::ffff:127.0.0.1 - - [05/Sep/2026 19:39:20] "GET /favicon.ico HTTP/1.1" 404 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:39:21] "GET /shopkeeper-dashboard.html HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:39:21] "GET /ui-enhance.css HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:39:21] "GET /swipe.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:39:21] "GET /sidebar.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:39:21] "GET /ui-enhance.js HTTP/1.1" 200 -
+::ffff:127.0.0.1 - - [05/Sep/2026 19:39:21] "GET /system-guide.js HTTP/1.1" 200 -

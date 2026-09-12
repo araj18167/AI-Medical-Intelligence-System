@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+python-multipart
+google-genai
+sqlalchemy
+pydantic
+bcrypt
+pyjwt
+python-docx
+reportlab
+openai-whisper

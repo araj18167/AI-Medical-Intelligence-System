@@ -1,0 +1,513 @@
+INFO:     Started server process [26384]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+[migrations] skipped ALTER TABLE medicine_stock ADD COLUMN composition VARCHAR: (sqlite3.OperationalError) duplicate column name: composition
+[SQL: ALTER TABLE medicine_stock ADD COLUMN composition VARCHAR]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[migrations] skipped ALTER TABLE bills ADD COLUMN status VARCHAR: (sqlite3.OperationalError) duplicate column name: status
+[SQL: ALTER TABLE bills ADD COLUMN status VARCHAR]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+INFO:     127.0.0.1:57271 - "GET / HTTP/1.1" 200 OK
+C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\jwt\api_jwt.py:147: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:57273 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57274 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57276 - "POST /login HTTP/1.1" 200 OK
+C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:57277 - "POST /pharmacy/stock HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57278 - "GET /billing/hospital/stock/search?q=Amox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57279 - "GET /billing/hospital/stock/search?q=BillingCenterAmox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57280 - "POST /billing/hospital/bills HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57281 - "GET /billing/me/bills?page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57282 - "GET /billing/hospital/bills?status=draft&page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57283 - "GET /billing/hospital/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57284 - "POST /billing/hospital/bills/2/finalize HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57285 - "GET /billing/me/bills?page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57286 - "GET /billing/me/bills/detail?source=hospital&bill_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57287 - "POST /billing/hospital/bills HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57288 - "POST /billing/hospital/bills HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:57289 - "POST /billing/hospital/bills/3/cancel HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57290 - "POST /billing/me/pay HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:57291 - "POST /billing/hospital/bills/2/cancel HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:57292 - "GET /billing/hospital/bills/2 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57293 - "POST /billing/hospital/bills/2/cancel HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57294 - "GET /billing/hospital/bills?status=issued&page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57295 - "GET /billing/hospital/bills?q=BillingCenterAmox&page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57296 - "GET /billing/hospital/bills?q=INV-&page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57297 - "GET /billing/hospital/bills?patient_id=1&page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57298 - "GET /billing/hospital/payments HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57299 - "GET /billing/hospital/analytics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57300 - "GET /billing/hospital/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57301 - "GET /billing/hospital/bills/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57303 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57304 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57305 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57306 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57307 - "POST /pharmacy/invoices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57308 - "POST /bills HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57309 - "GET /billing/me/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57310 - "GET /billing/me/bills?page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57311 - "GET /billing/me/bills/detail?source=hospital&bill_id=2 HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57312 - "GET /billing/me/bills/detail?source=pharmacy&bill_id=5 HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57313 - "POST /billing/me/pay HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57314 - "GET /billing/me/bills/detail?source=hospital&bill_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57315 - "GET /billing/me/bills?q=INV-20260905-0002&page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57316 - "GET /billing/me/bills?source=pharmacy&page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57317 - "GET /billing/me/analytics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57318 - "POST /billing/me/pay HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:57319 - "POST /billing/me/pay HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:57320 - "POST /billing/me/pay HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:57321 - "POST /billing/me/pay HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57322 - "POST /billing/me/pay HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57323 - "POST /billing/me/pay HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57324 - "POST /billing/me/pay HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:57325 - "GET /billing/hospital/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57326 - "POST /billing/hospital/payments/3/approve HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57327 - "POST /billing/hospital/payments/3/approve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57328 - "GET /billing/me/bills/detail?source=hospital&bill_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57329 - "POST /billing/hospital/payments/4/approve HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:57330 - "POST /billing/me/pay HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57331 - "POST /billing/me/pay HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:57332 - "GET /billing/me/bills/detail?source=pharmacy&bill_id=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57333 - "GET /billing/me/receipt/5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57334 - "POST /billing/me/pay HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57335 - "POST /billing/me/payments/6/cancel HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57336 - "GET /billing/me/payments/6/cancel HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:57337 - "POST /billing/hospital/payments/4/reject HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57338 - "POST /billing/hospital/payments/3/refund HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57339 - "GET /billing/me/bills/detail?source=hospital&bill_id=2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57340 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57341 - "POST /pharmacy/invoices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57342 - "POST /billing/me/pay HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57343 - "POST /billing/hospital/payments/7/approve HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57344 - "POST /billing/hospital/payments/7/approve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57345 - "GET /billing/hospital/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64264 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64265 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57346 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57347 - "GET /hospitals?limit=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57348 - "GET /doctors/directory?limit=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57349 - "GET /doctors/5/public-profile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57350 - "GET /doctors/999999/public-profile HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57351 - "GET /patients/mine/care-events?kind=doctor HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57352 - "GET /patients/mine/care-events?kind=hospital HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57353 - "GET /patients/mine/linked-doctors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57354 - "DELETE /patients/mine/linked-doctors/2 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:57355 - "POST /patients/mine/linked-doctors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57356 - "POST /patients/mine/linked-doctors HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:57357 - "GET /patients/mine/doctor-requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57358 - "GET /patients/mine/linked-doctors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57359 - "GET /doctors/mine/link-requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57360 - "POST /doctors/mine/link-requests/1/accept HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57361 - "POST /doctors/mine/link-requests/1/accept HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57362 - "GET /patients/mine/linked-doctors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57363 - "GET /doctors/mine/link-requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57364 - "GET /patients/mine/care-events?kind=doctor HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57365 - "DELETE /patients/mine/linked-doctors/2 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:57366 - "POST /patients/mine/linked-doctors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57367 - "POST /doctors/mine/link-requests/1/reject HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57368 - "GET /patients/mine/doctor-requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57369 - "GET /patients/mine/linked-doctors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57370 - "GET /patients/mine/care-events?kind=doctor HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57371 - "POST /patients/mine/linked-doctors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57372 - "DELETE /patients/mine/linked-doctors/2 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57373 - "DELETE /patients/mine/doctor-requests/2 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:57374 - "GET /patients/mine/doctor-requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57375 - "GET /patients/mine/care-events?kind=doctor HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57376 - "POST /patients/mine/linked-doctors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57377 - "POST /doctors/mine/link-requests/1/accept HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57378 - "POST /patients/mine/linked-hospitals HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57379 - "GET /patients/mine/care-events?kind=hospital HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57380 - "DELETE /patients/mine/linked-hospitals/3 HTTP/1.1" 204 No Content
+INFO:     127.0.0.1:57381 - "GET /patients/mine/care-events?kind=hospital HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57382 - "GET /patients/mine/linked-hospitals HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57383 - "GET /doctors/mine/link-requests HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57384 - "GET /patients/mine/doctor-requests HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57385 - "GET /patients/mine/care-events HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:57387 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57388 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57389 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57390 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57391 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57392 - "GET /nurse-tasks/options HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57393 - "POST /nurse-tasks/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57394 - "POST /nurse-tasks/create HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57395 - "POST /nurse-tasks/create HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57396 - "GET /nurse-tasks/options HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57397 - "POST /nurse-tasks/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57398 - "POST /nurse-tasks/create HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57399 - "GET /nurse-tasks/mine?filter=all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57400 - "GET /nurse-tasks/mine/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57401 - "GET /nurse-tasks/mine?filter=high HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57402 - "POST /nurse-tasks/1/acknowledge HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57403 - "POST /nurse-tasks/1/start HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57404 - "POST /nurse-tasks/1/progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57405 - "POST /nurse-tasks/1/notes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57406 - "GET /nurse-tasks/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57407 - "POST /nurse-tasks/1/followup HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57408 - "POST /nurse-tasks/1/complete HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57409 - "GET /nurse-tasks/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57410 - "GET /nurse-tasks/mine/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57411 - "POST /nurse-tasks/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57412 - "POST /nurse-tasks/3/escalate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57413 - "POST /nurse-tasks/3/escalate HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57414 - "POST /nurse-tasks/3/respond-escalation HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57415 - "POST /nurse-tasks/3/cancel HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57416 - "POST /nurse-tasks/3/complete HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:57417 - "POST /nurse-tasks/create HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57418 - "POST /nurse-tasks/create HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57419 - "GET /nurse-tasks/mine HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57420 - "GET /nurse-tasks/created HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57421 - "GET /nurse-tasks/created HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57422 - "GET /nurse-tasks/999999 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57423 - "GET /settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57424 - "GET /settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57425 - "GET /settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57426 - "PUT /settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57427 - "PUT /settings HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:57428 - "PUT /settings HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:57429 - "GET /settings/audit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57430 - "POST /nurse-tasks/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57431 - "PUT /settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57432 - "GET /api/activity?limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57433 - "GET /api/activity/heatmap?days=56 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57434 - "GET /api/activity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57435 - "GET /api/activity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57436 - "GET /api/activity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57438 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57439 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57440 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57441 - "GET /patients/1/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57442 - "GET /patients/1/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57443 - "GET /patients/99999/basic-info HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57444 - "GET /patients/1/basic-info HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57445 - "GET /patients/1/basic-info HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:57446 - "GET /ai-reports HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57447 - "GET /ai-reports HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:57448 - "GET /ai-reports HTTP/1.1" 403 Forbidden
+predict_disease degraded: Could not parse model response: Expecting ',' delimiter: line 1 column 3363 (char 3362)
+INFO:     127.0.0.1:57449 - "POST /predict-disease HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57454 - "GET /ai-reports HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57455 - "POST /predict-disease HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57461 - "GET /ai-reports HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57462 - "GET /ai-reports?q=headache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57463 - "GET /ai-reports?feature_type=symptom_checker HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57464 - "GET /ai-reports?feature_type=mediscan HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57465 - "GET /ai-reports/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57466 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57467 - "GET /ai-reports/2 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57468 - "GET /ai-reports/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63448 - "GET /doctors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63449 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63449 - "OPTIONS /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63449 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63453 - "OPTIONS /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63449 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63454 - "OPTIONS /api/activity/heatmap?days=56 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63453 - "OPTIONS /api/activity?limit=10&days=14 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63455 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63454 - "GET /api/activity?limit=10&days=14 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63453 - "GET /api/activity/heatmap?days=56 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63453 - "OPTIONS /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63453 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63453 - "OPTIONS /hospitals/mine HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63453 - "GET /hospitals/mine HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63453 - "OPTIONS /admissions?status=active HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63454 - "OPTIONS /admissions?status=discharged HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63455 - "OPTIONS /discharge-appeals?status=pending_hospital HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63449 - "OPTIONS /wards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63454 - "GET /discharge-appeals?status=pending_hospital HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63455 - "GET /admissions?status=discharged HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63449 - "GET /admissions?status=active HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63453 - "GET /wards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63453 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63453 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63453 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63453 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63453 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63461 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63474 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63476 - "OPTIONS /billing/hospital/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63476 - "GET /billing/hospital/dashboard HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:63478 - "GET /billing/hospital/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63478 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63497 - "GET /doctors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63500 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63500 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63500 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63501 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63502 - "GET /api/activity/heatmap?days=56 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63503 - "GET /api/activity?limit=10&days=14 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63503 - "GET /hospitals/mine HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63502 - "GET /discharge-appeals?status=pending_hospital HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63504 - "GET /admissions?status=discharged HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63503 - "GET /admissions?status=active HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63501 - "GET /wards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63501 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63501 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63501 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63508 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63501 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50152 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57694 - "GET /doctors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59698 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59698 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59698 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59699 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59702 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59700 - "GET /api/activity/heatmap?days=56 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59701 - "GET /api/activity?limit=10&days=14 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59701 - "GET /hospitals/mine HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59702 - "GET /discharge-appeals?status=pending_hospital HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59700 - "GET /admissions?status=discharged HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59701 - "GET /admissions?status=active HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59699 - "GET /wards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59699 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59699 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59699 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53544 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59699 - "GET /hospitals/mine HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59699 - "OPTIONS /pharmacy/stock?hospital_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53544 - "OPTIONS /pharmacy/stock?hospital_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53544 - "GET /pharmacy/stock?hospital_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53545 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59699 - "GET /billing/hospital/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53544 - "GET /pharmacy/stock?hospital_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59699 - "OPTIONS /billing/hospital/bills?page_size=6&status=issued HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59699 - "GET /billing/hospital/bills?page_size=6&status=issued HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59699 - "OPTIONS /billing/hospital/analytics?days=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59699 - "GET /billing/hospital/analytics?days=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53552 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53553 - "GET /pharmacy/stock?hospital_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53555 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53556 - "POST /pharmacy/stock HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53557 - "POST /pharmacy/stock HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53558 - "POST /pharmacy/stock HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53560 - "GET /pharmacy/stock?hospital_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53561 - "OPTIONS /patients/1/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53561 - "GET /patients/1/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53567 - "OPTIONS /billing/hospital/stock/search?q=Para HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53567 - "GET /billing/hospital/stock/search?q=Para HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60892 - "OPTIONS /billing/hospital/bills HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60892 - "POST /billing/hospital/bills HTTP/1.1" 201 Created
+INFO:     127.0.0.1:60893 - "OPTIONS /billing/hospital/bills/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60892 - "GET /pharmacy/stock?hospital_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60893 - "GET /billing/hospital/bills/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60900 - "OPTIONS /billing/hospital/bills/2/finalize HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60900 - "POST /billing/hospital/bills/2/finalize HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60900 - "OPTIONS /billing/hospital/bills?page=1&page_size=12&sort=newest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60901 - "GET /pharmacy/stock?hospital_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60900 - "GET /billing/hospital/bills?page=1&page_size=12&sort=newest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60901 - "GET /pharmacy/stock?hospital_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49717 - "GET /doctors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49719 - "POST /login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:49722 - "OPTIONS /billing/me/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49724 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49722 - "GET /billing/me/summary HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:49723 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49723 - "OPTIONS /billing/me/bills?page=1&page_size=12&q=&status=&sort=newest&source= HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49723 - "GET /billing/me/bills?page=1&page_size=12&q=&status=&sort=newest&source= HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:58190 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58192 - "GET /doctors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58024 - "POST /auth/login HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:54922 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49674 - "OPTIONS /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49675 - "OPTIONS /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49675 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49676 - "GET /billing/me/summary HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:49674 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49674 - "GET /billing/me/bills?page=1&page_size=12&q=&status=&sort=newest&source= HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:54954 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56180 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59007 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56180 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59006 - "GET /billing/me/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59006 - "GET /billing/me/bills?page=1&page_size=12&q=&status=&sort=newest&source= HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50978 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50978 - "OPTIONS /billing/me/bills?page=1&page_size=12 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50978 - "GET /billing/me/bills?page=1&page_size=12 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65380 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50978 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65379 - "GET /billing/me/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65379 - "GET /billing/me/bills?page=1&page_size=12&q=&status=&sort=newest&source= HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64378 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64378 - "GET /billing/me/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57191 - "GET /doctors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62936 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62934 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62935 - "GET /billing/me/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62935 - "GET /billing/me/bills?page=1&page_size=12&q=&status=&sort=newest&source= HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60120 - "OPTIONS /billing/me/pay HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60120 - "POST /billing/me/pay HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60121 - "GET /billing/me/bills?page=1&page_size=12&q=&status=&sort=newest&source= HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60120 - "GET /billing/me/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52234 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56907 - "OPTIONS /hospitals/mine HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56908 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56907 - "GET /hospitals/mine HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56907 - "OPTIONS /pharmacy/stock?hospital_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56908 - "OPTIONS /pharmacy/stock?hospital_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56909 - "OPTIONS /billing/hospital/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56907 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56909 - "GET /billing/hospital/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56908 - "GET /pharmacy/stock?hospital_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56909 - "OPTIONS /billing/hospital/bills?page_size=6&status=issued HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56908 - "GET /pharmacy/stock?hospital_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56909 - "GET /billing/hospital/bills?page_size=6&status=issued HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56909 - "OPTIONS /billing/hospital/analytics?days=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56909 - "GET /billing/hospital/analytics?days=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56914 - "OPTIONS /billing/hospital/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56915 - "OPTIONS /billing/hospital/payments?page=1&page_size=15 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56914 - "GET /billing/hospital/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56915 - "GET /billing/hospital/payments?page=1&page_size=15 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56917 - "OPTIONS /billing/hospital/payments/3/approve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56917 - "POST /billing/hospital/payments/3/approve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56917 - "GET /billing/hospital/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56918 - "GET /billing/hospital/bills?page=1&page_size=12&sort=newest HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56920 - "POST /billing/hospital/payments/3/approve HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:56925 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56926 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56927 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56928 - "POST /pharmacy/stock HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56929 - "GET /billing/hospital/stock/search?q=Amox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56930 - "GET /billing/hospital/stock/search?q=BillingCenterAmox HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56931 - "POST /billing/hospital/bills HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56932 - "GET /billing/me/bills?page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56933 - "GET /billing/hospital/bills?status=draft&page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56934 - "GET /billing/hospital/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56935 - "POST /billing/hospital/bills/3/finalize HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56936 - "GET /billing/me/bills?page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56937 - "GET /billing/me/bills/detail?source=hospital&bill_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56938 - "POST /billing/hospital/bills HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56939 - "POST /billing/hospital/bills HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:56940 - "POST /billing/hospital/bills/4/cancel HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56941 - "POST /billing/me/pay HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:56942 - "POST /billing/hospital/bills/3/cancel HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:56943 - "GET /billing/hospital/bills/3 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56944 - "POST /billing/hospital/bills/3/cancel HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56945 - "GET /billing/hospital/bills?status=issued&page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56946 - "GET /billing/hospital/bills?q=BillingCenterAmox&page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56947 - "GET /billing/hospital/bills?q=INV-&page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56948 - "GET /billing/hospital/bills?patient_id=1&page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56949 - "GET /billing/hospital/payments HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56950 - "GET /billing/hospital/analytics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56951 - "GET /billing/hospital/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56952 - "GET /billing/hospital/bills/3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56954 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56955 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56956 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56957 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56958 - "POST /pharmacy/invoices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56959 - "POST /bills HTTP/1.1" 201 Created
+INFO:     127.0.0.1:56960 - "GET /billing/me/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56961 - "GET /billing/me/bills?page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56962 - "GET /billing/me/bills/detail?source=hospital&bill_id=3 HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:56963 - "GET /billing/me/bills/detail?source=pharmacy&bill_id=5 HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:56964 - "POST /billing/me/pay HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:56965 - "GET /billing/me/bills/detail?source=hospital&bill_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56966 - "GET /billing/me/bills?q=INV-20260905-0003&page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56967 - "GET /billing/me/bills?source=pharmacy&page_size=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56968 - "GET /billing/me/analytics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56969 - "POST /billing/me/pay HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:56970 - "POST /billing/me/pay HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:56971 - "POST /billing/me/pay HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:56972 - "POST /billing/me/pay HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56973 - "POST /billing/me/pay HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56974 - "POST /billing/me/pay HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "POST /billing/me/pay HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:56976 - "GET /billing/hospital/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56977 - "POST /billing/hospital/payments/3/approve HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:56978 - "POST /billing/hospital/payments/3/approve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56979 - "GET /billing/me/bills/detail?source=hospital&bill_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56980 - "POST /billing/hospital/payments/4/approve HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:56981 - "POST /billing/me/pay HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56982 - "POST /billing/me/pay HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:56983 - "GET /billing/me/bills/detail?source=pharmacy&bill_id=5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56984 - "GET /billing/me/receipt/5 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56985 - "POST /billing/me/pay HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56986 - "POST /billing/me/payments/6/cancel HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56987 - "GET /billing/me/payments/6/cancel HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:56988 - "POST /billing/hospital/payments/4/reject HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56989 - "POST /billing/hospital/payments/3/refund HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56990 - "GET /billing/me/bills/detail?source=hospital&bill_id=3 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56991 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56992 - "POST /pharmacy/invoices HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56993 - "POST /billing/me/pay HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56994 - "POST /billing/hospital/payments/7/approve HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:56995 - "POST /billing/hospital/payments/7/approve HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56996 - "GET /billing/hospital/pending HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56998 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56999 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57000 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57001 - "GET /patients/1/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57002 - "GET /patients/1/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57003 - "GET /patients/99999/basic-info HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57004 - "GET /patients/1/basic-info HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57005 - "GET /patients/1/basic-info HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:57006 - "GET /ai-reports HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57007 - "GET /ai-reports HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:57008 - "GET /ai-reports HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57009 - "POST /predict-disease HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57014 - "GET /ai-reports HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57015 - "POST /predict-disease HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57016 - "GET /ai-reports HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57017 - "GET /ai-reports?q=headache HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57018 - "GET /ai-reports?feature_type=symptom_checker HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57019 - "GET /ai-reports?feature_type=mediscan HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57020 - "GET /ai-reports/2 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57021 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57022 - "GET /ai-reports/2 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57023 - "GET /ai-reports/summary HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57025 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57026 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57027 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57028 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57029 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57030 - "GET /nurse-tasks/options HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57031 - "POST /nurse-tasks/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57032 - "POST /nurse-tasks/create HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57033 - "POST /nurse-tasks/create HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57034 - "GET /nurse-tasks/options HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57035 - "POST /nurse-tasks/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57036 - "POST /nurse-tasks/create HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57037 - "GET /nurse-tasks/mine?filter=all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57038 - "GET /nurse-tasks/mine/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57039 - "GET /nurse-tasks/mine?filter=high HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57040 - "POST /nurse-tasks/1/acknowledge HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57041 - "POST /nurse-tasks/1/start HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57042 - "POST /nurse-tasks/1/progress HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57043 - "POST /nurse-tasks/1/notes HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57044 - "GET /nurse-tasks/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57045 - "POST /nurse-tasks/1/followup HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57046 - "POST /nurse-tasks/1/complete HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57047 - "GET /nurse-tasks/1 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57048 - "GET /nurse-tasks/mine/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57049 - "POST /nurse-tasks/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57050 - "POST /nurse-tasks/3/escalate HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57051 - "POST /nurse-tasks/3/escalate HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57052 - "POST /nurse-tasks/3/respond-escalation HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57053 - "POST /nurse-tasks/3/cancel HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57054 - "POST /nurse-tasks/3/complete HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:57055 - "POST /nurse-tasks/create HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57056 - "POST /nurse-tasks/create HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57057 - "GET /nurse-tasks/mine HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:57058 - "GET /nurse-tasks/created HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57059 - "GET /nurse-tasks/created HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57060 - "GET /nurse-tasks/999999 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:57061 - "GET /settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57062 - "GET /settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57063 - "GET /settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57064 - "PUT /settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57065 - "PUT /settings HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:57066 - "PUT /settings HTTP/1.1" 400 Bad Request
+INFO:     127.0.0.1:57067 - "GET /settings/audit HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57068 - "POST /nurse-tasks/create HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57069 - "PUT /settings HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57070 - "GET /api/activity?limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57071 - "GET /api/activity/heatmap?days=56 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57072 - "GET /api/activity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57073 - "GET /api/activity HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57074 - "GET /api/activity HTTP/1.1" 200 OK

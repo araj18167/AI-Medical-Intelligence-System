@@ -1,0 +1,140 @@
+INFO:     Started server process [14524]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+[migrations] skipped ALTER TABLE medicine_stock ADD COLUMN composition VARCHAR: (sqlite3.OperationalError) duplicate column name: composition
+[SQL: ALTER TABLE medicine_stock ADD COLUMN composition VARCHAR]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+[migrations] skipped ALTER TABLE bills ADD COLUMN status VARCHAR: (sqlite3.OperationalError) duplicate column name: status
+[SQL: ALTER TABLE bills ADD COLUMN status VARCHAR]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+INFO:     127.0.0.1:57120 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57120 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57120 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57120 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+C:\Users\ASUS\AppData\Roaming\Python\Python313\site-packages\jwt\api_jwt.py:147: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:57121 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57122 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57123 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57124 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57125 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57126 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57120 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57120 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57120 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57120 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57120 - "OPTIONS /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57120 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57120 - "OPTIONS /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50344 - "OPTIONS /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57120 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57769 - "GET /notifications/unread-count HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50344 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56083 - "GET /api/activity?limit=10&days=14 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54995 - "GET /api/activity/heatmap?days=56 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57769 - "GET /hospitals/mine HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57769 - "GET /admissions?status=active HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56083 - "GET /discharge-appeals?status=pending_hospital HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54995 - "GET /admissions?status=discharged HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50344 - "GET /wards HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54995 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50344 - "GET /hospitals/mine HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50344 - "OPTIONS /pharmacy/stock?hospital_id=4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54995 - "OPTIONS /pharmacy/stock?hospital_id=4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56083 - "OPTIONS /billing/hospital/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57769 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56083 - "GET /pharmacy/stock?hospital_id=4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54995 - "GET /billing/hospital/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57769 - "GET /pharmacy/stock?hospital_id=4 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57769 - "OPTIONS /billing/hospital/bills?page_size=6&status=issued HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57769 - "GET /billing/hospital/bills?page_size=6&status=issued HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57769 - "OPTIONS /billing/hospital/analytics?days=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57769 - "GET /billing/hospital/analytics?days=30 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59227 - "OPTIONS /patients/1/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59227 - "GET /patients/1/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59227 - "OPTIONS /patients/2/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59227 - "GET /patients/2/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59227 - "OPTIONS /patients/3/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59227 - "GET /patients/3/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59227 - "OPTIONS /patients/4/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59227 - "GET /patients/4/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59227 - "OPTIONS /patients/5/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59227 - "GET /patients/5/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59227 - "OPTIONS /patients/6/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59227 - "GET /patients/6/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59227 - "OPTIONS /patients/32/basic-info HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59227 - "GET /patients/32/basic-info HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:53585 - "GET /doctors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62201 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62201 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61745 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62201 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62201 - "OPTIONS /shopkeeper/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62201 - "GET /shopkeeper/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62201 - "OPTIONS /shopkeeper/activities?limit=5&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61745 - "OPTIONS /shopkeeper/activities/heatmap?days=56 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59477 - "OPTIONS /api/ml/insights HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54663 - "OPTIONS /api/ml/pharmacy/intelligence HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61745 - "OPTIONS /api/ml/pharmacy/sales-forecast?horizon=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62201 - "OPTIONS /api/ml/pharmacy/demand HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59477 - "GET /shopkeeper/activities?limit=5&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61745 - "GET /api/ml/insights HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62201 - "GET /shopkeeper/activities/heatmap?days=56 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65480 - "GET /api/ml/pharmacy/sales-forecast?horizon=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54663 - "GET /api/ml/pharmacy/intelligence HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /api/ml/pharmacy/demand HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "OPTIONS /shopkeeper/customers?search=&limit=12&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54663 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /shopkeeper/customers?search=&limit=12&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54663 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54663 - "GET /shopkeeper/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49669 - "GET /api/ml/pharmacy/sales-forecast?horizon=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54827 - "GET /api/ml/insights HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56975 - "GET /shopkeeper/activities/heatmap?days=56 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58971 - "GET /api/ml/pharmacy/intelligence HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54663 - "GET /shopkeeper/activities?limit=5&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63986 - "GET /api/ml/pharmacy/demand HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49669 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49669 - "GET /shopkeeper/customers?search=&limit=12&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63986 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54663 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54663 - "OPTIONS /bills HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63986 - "OPTIONS /inventory HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49669 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54663 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63986 - "GET /bills HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58971 - "GET /inventory HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58971 - "GET /shopkeeper/customers?search=&limit=12&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63986 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54663 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53792 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64083 - "GET /doctors HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65288 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64083 - "OPTIONS /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58495 - "OPTIONS /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64083 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58495 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58495 - "OPTIONS /shopkeeper/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58495 - "GET /shopkeeper/dashboard HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58495 - "OPTIONS /shopkeeper/activities?limit=5&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64083 - "OPTIONS /shopkeeper/activities/heatmap?days=56 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64171 - "OPTIONS /api/ml/insights HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49742 - "OPTIONS /api/ml/pharmacy/intelligence HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55474 - "OPTIONS /api/ml/pharmacy/sales-forecast?horizon=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61809 - "OPTIONS /api/ml/pharmacy/demand HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55474 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58495 - "GET /shopkeeper/activities/heatmap?days=56 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49742 - "GET /api/ml/pharmacy/intelligence HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64083 - "GET /shopkeeper/activities?limit=5&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61809 - "GET /api/ml/pharmacy/sales-forecast?horizon=7 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64171 - "GET /api/ml/insights HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55474 - "GET /api/ml/pharmacy/demand HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62261 - "GET /shopkeeper/customers?search=&limit=12&offset=0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63806 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52288 - "GET /me/nav HTTP/1.1" 200 OK

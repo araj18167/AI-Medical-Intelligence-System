@@ -1,0 +1,42 @@
+﻿.\venv\Scripts\python.exe : INFO:     Started server process [15004]
+At line:1 char:348
++ ... ce_system"; .\venv\Scripts\python.exe -m uvicorn main:app --host 127. ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (INFO:     Started server process [15004]:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:57659 - "GET / HTTP/1.1" 200 OK
+D:\Projects\Medical_Intelligence_system\venv\Lib\site-packages\jwt\api_jwt.py:147: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below 
+the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:56607 - "POST /login HTTP/1.1" 200 OK
+D:\Projects\Medical_Intelligence_system\venv\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below 
+the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:50395 - "GET /notifications/preferences HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50396 - "POST /notifications/test-browser HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64333 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64334 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64335 - "GET /notifications/preferences HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64336 - "PUT /notifications/preferences HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64337 - "GET /me/avatar/0 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64338 - "GET /me/avatar/abc HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:64339 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64340 - "GET /me/nav HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64341 - "GET /me/nav HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:64342 - "GET /me HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:58912 - "POST /change-password HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:58913 - "POST /change-password HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58914 - "POST /change-password HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:58915 - "POST /change-password HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:65442 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65443 - "POST /login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:65444 - "POST /login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:65456 - "POST /login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:61464 - "POST /signup HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61465 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61466 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61467 - "GET /doctors/directory HTTP/1.1" 404 Not Found

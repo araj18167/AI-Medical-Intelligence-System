@@ -1,0 +1,11 @@
+﻿
+python.exe : FAIL [create admit request]: expected 200, got 409
+At line:1 char:302
++ ... tch {} } }; & ".\venv\Scripts\python.exe" smoke_nurse_place.py 2>&1 | ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (FAIL [create ad...ed 200, got 409:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+[1] File admit request as doctor
+  ok [list my patients]: 200
+  using patient id=1 name=Test Patient

@@ -1,0 +1,91 @@
+INFO:     Started server process [30640]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:63350 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63351 - "GET /health HTTP/1.1" 200 OK
+D:\Projects\Medical_Intelligence_system\venv\Lib\site-packages\jwt\api_jwt.py:147: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:56879 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56880 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56881 - "POST /login HTTP/1.1" 200 OK
+D:\Projects\Medical_Intelligence_system\venv\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:56882 - "GET /nurse/patients/history HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56883 - "GET /admissions?status=discharged HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56884 - "GET /admissions?status=active HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56885 - "GET /admissions?status=all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56886 - "GET /hospitals HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56887 - "POST /hospital-admit-requests HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:56888 - "GET /hospital-admit-requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56889 - "POST /hospital-admit-requests/bulk-delete HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56890 - "POST /hospital-admit-requests/bulk-delete HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56891 - "POST /hospital-admit-requests/bulk-delete HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56892 - "POST /hospital-admit-requests/bulk-delete HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:56893 - "GET /nurse/patients/active HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56894 - "GET /admissions/22/nurse-notes?limit=20 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:56895 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56896 - "GET /admissions/21/nurse-notes?limit=20 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:51431 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51432 - "GET /nurse/patients/active HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59369 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59370 - "GET /admissions/22/nurse-notes?limit=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59371 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59372 - "GET /admissions/22/nurse-notes?limit=20 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:61160 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61161 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61162 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61163 - "GET /nurse/patients/history HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61164 - "GET /admissions?status=discharged HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61165 - "GET /admissions?status=active HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61166 - "GET /admissions?status=all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61167 - "GET /hospitals HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61168 - "POST /hospital-admit-requests HTTP/1.1" 409 Conflict
+INFO:     127.0.0.1:61169 - "GET /hospital-admit-requests HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61170 - "POST /hospital-admit-requests/bulk-delete HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61171 - "POST /hospital-admit-requests/bulk-delete HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61172 - "POST /hospital-admit-requests/bulk-delete HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61173 - "POST /hospital-admit-requests/bulk-delete HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:61174 - "GET /nurse/patients/active HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61175 - "GET /admissions/22/nurse-notes?limit=20 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61176 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61177 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61178 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61179 - "GET /nurse/patients/active HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61180 - "POST /admissions/22/medications HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61181 - "POST /admissions/22/treatments HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61182 - "POST /admissions/22/ai-summary-reports HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54477 - "GET /notifications/recent HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54478 - "GET /ai-summary-reports/10/download HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50991 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50992 - "POST /chat/threads/3/0/read HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50993 - "GET /ai-summary-reports/10/download HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50351 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50352 - "GET /auth/me HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50353 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50354 - "GET /users/me HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50355 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52378 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52379 - "POST /chat/threads/3/2/read HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52380 - "GET /ai-summary-reports/10/download HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59033 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59034 - "GET /chat/threads HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59809 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59810 - "GET /admissions?status=all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60878 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60879 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60880 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60881 - "GET /admissions/18 HTTP/1.1" 403 Forbidden
+INFO:     127.0.0.1:60882 - "POST /admissions/18/nurse HTTP/1.1" 422 Unprocessable Content
+INFO:     127.0.0.1:60883 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60887 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60888 - "POST /admissions/18/nurse HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60889 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60890 - "GET /nurse/patients/active HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60891 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60892 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60893 - "POST /admissions/21/ai-summary-reports HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55183 - "GET /ai-summary-reports/11/download HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55184 - "GET /chat/threads/1/2/messages?limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55185 - "GET /admissions?status=all HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54663 - "GET /health HTTP/1.1" 200 OK

@@ -1,0 +1,80 @@
+﻿.\venv\Scripts\python.exe : INFO:     Started server process [17608]
+At line:1 char:346
++ ... nce_system; .\venv\Scripts\python.exe -m uvicorn main:app --host 127. ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (INFO:     Started server process [17608]:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8765 (Press CTRL+C to quit)
+INFO:     127.0.0.1:62163 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62166 - "POST /signup HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52771 - "POST /login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:52775 - "POST /signup HTTP/1.1" 200 OK
+D:\Projects\Medical_Intelligence_system\venv\Lib\site-packages\jwt\api_jwt.py:147: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below 
+the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  return self._jws.encode(
+INFO:     127.0.0.1:52776 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50198 - "POST /signup HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50199 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50200 - "POST /signup HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50201 - "POST /login HTTP/1.1" 200 OK
+D:\Projects\Medical_Intelligence_system\venv\Lib\site-packages\jwt\api_jwt.py:368: InsecureKeyLengthWarning: The HMAC key is 6 bytes long, which is below 
+the minimum recommended length of 32 bytes for SHA256. See RFC 7518 Section 3.2.
+  decoded = self.decode_complete(
+INFO:     127.0.0.1:50202 - "POST /patients HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50203 - "POST /login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:50204 - "POST /patients HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:50209 - "POST /signup HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50210 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50211 - "POST /patients HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50212 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50213 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50214 - "POST /doctor/invite-codes HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50217 - "POST /signup HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50218 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50220 - "POST /patients HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50221 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50222 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50223 - "POST /doctor/invite-codes HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50224 - "POST /signup HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50225 - "GET /patients/mine HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50226 - "GET /login HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:50227 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50228 - "GET /patient/profile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50229 - "GET /patients/mine HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50230 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50231 - "POST /signup HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50232 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50233 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50234 - "GET /patient/profile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50235 - "GET /patients/mine HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50236 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50237 - "POST /patients/6/reset-credentials HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50238 - "POST /login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:50239 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50240 - "GET /patients HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50241 - "POST /signup HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50242 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50243 - "POST /patients HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50244 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50245 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50246 - "POST /doctor/invite-codes HTTP/1.1" 201 Created
+INFO:     127.0.0.1:50247 - "POST /signup HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50248 - "GET /patients/mine HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50249 - "GET /login HTTP/1.1" 405 Method Not Allowed
+INFO:     127.0.0.1:50250 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50251 - "GET /patient/profile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50252 - "GET /patients/mine HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50253 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50254 - "POST /signup HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50255 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50256 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50257 - "GET /patient/profile HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50258 - "GET /patients/mine HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50259 - "GET /me HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50260 - "POST /patients/9/reset-credentials HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50262 - "POST /login HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:50263 - "POST /login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50264 - "GET /patients HTTP/1.1" 200 OK
